@@ -33,5 +33,6 @@ class Cell
         list << west if west
         list << south if south
         list << east if east
+        list
     end
 end
