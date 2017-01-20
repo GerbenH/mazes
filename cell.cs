@@ -44,14 +44,12 @@ namespace Mazes
         {
             get
             {
-                List<Cell> returnList = new List<Cell>
-                {
-                    North,
-                    South,
-                    West,
-                    East
-                };
-                return returnList.FindAll(c => c != null);
+                List<Cell> returnList = new List<Cell>();
+                if(North!=null) returnList.Add(North);
+                if(South!=null) returnList.Add(South);
+                if(East!=null) returnList.Add(East);
+                if(West!=null) returnList.Add(West);
+                return returnList;
             }
         }
     }

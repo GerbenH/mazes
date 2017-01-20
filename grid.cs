@@ -1,6 +1,8 @@
 namespace Mazes
 {
     using System;
+    using System.Collections.Generic;
+    using System.Linq;
     public class Grid
     {
         private Cell[,] grid;
@@ -37,6 +39,30 @@ namespace Mazes
                 if(Column >= Columns) return null;
                 return grid[Row,Column]; 
             }
+        }
+
+        public Cell RandomCell()
+        {
+            Random rand = new Random();
+            uint randomRow = (uint)rand.Next((int)Rows);
+            uint randomColumn = (uint)rand.Next((int)Columns);
+            return this[randomRow,randomColumn];
+        }
+
+        public uint Size
+        {
+            get { return Rows * Columns; }
+        }
+
+        public IEnumerable<IEnumerable<Cell>> EachRow()
+        {
+            for(uint row = 0;row<Rows;row++)
+                yield return grid.Cast<Cell>().Skip((int)(row*Columns)).Take((int)Columns);         
+        }
+
+        public IEnumerable<Cell> EachCell()
+        {
+            return grid.Cast<Cell>();
         }
     }
 }
