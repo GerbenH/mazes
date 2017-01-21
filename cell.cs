@@ -18,7 +18,7 @@ namespace Mazes
         public Cell Link(Cell linkingCell,bool bidi = true)
         {
             links[linkingCell]=true;
-            if(bidi) linkingCell.Link(this,true);
+            if(bidi) linkingCell.Link(this,false);
             return this;
         }
 
@@ -37,7 +37,7 @@ namespace Mazes
         public bool IsLinked(Cell neighbourCells)
         {
             try { return links[neighbourCells]; }
-            catch(KeyNotFoundException) { return false; }
+            catch { return false; }
         }
 
         public List<Cell> Neighbours

@@ -3,6 +3,7 @@ namespace Mazes
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Text;
     public class Grid
     {
         private Cell[,] grid;
@@ -63,6 +64,37 @@ namespace Mazes
         public IEnumerable<Cell> EachCell()
         {
             return grid.Cast<Cell>();
+        }
+
+        public override string ToString()
+        {
+            var output = new StringBuilder();
+
+            output.AppendLine($"+{String.Concat(Enumerable.Repeat("---+",(int)Columns))}");
+
+            foreach(IEnumerable<Cell> row in EachRow())
+            {
+                var top = new StringBuilder("|");
+                var bottom = new StringBuilder("+");
+
+                foreach(Cell cell in row)
+                {
+                    var cellToWorkWith = cell ?? new Cell(0,0); // TODO: must be able to set to -1 afterall..
+
+                    var body = String.Concat(Enumerable.Repeat(" ",3));
+                    var eastBoundary = cellToWorkWith.IsLinked(cellToWorkWith.East) ? " " : "|";
+                    top.Append($"{body}{eastBoundary}");
+
+                    var southBoundary = cellToWorkWith.IsLinked(cellToWorkWith.South) ? "   " : "---";
+                    var corner = "+";
+                    bottom.Append($"{southBoundary}{corner}");
+                }
+
+                output.AppendLine(top.ToString());
+                output.AppendLine(bottom.ToString());
+            }
+
+            return output.ToString();
         }
     }
 }
