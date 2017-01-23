@@ -3,6 +3,126 @@
   "version": 2,
   "targets": {
     ".NETCoreApp,Version=v1.1": {
+      "ImageSharp/1.0.0-alpha1-00071": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.0.0",
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Diagnostics.Tools": "4.0.1",
+          "System.IO": "4.1.0",
+          "System.IO.Compression": "4.1.0",
+          "System.Linq": "4.1.0",
+          "System.Numerics.Vectors": "4.1.1",
+          "System.ObjectModel": "4.0.12",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.0.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Runtime.Numerics": "4.0.1",
+          "System.Text.Encoding.Extensions": "4.0.11",
+          "System.Threading": "4.0.11",
+          "System.Threading.Tasks": "4.0.11",
+          "System.Threading.Tasks.Parallel": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/ImageSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/ImageSharp.dll": {}
+        }
+      },
+      "ImageSharp.Drawing/1.0.0-alpha1-00051": {
+        "type": "package",
+        "dependencies": {
+          "ImageSharp": "1.0.0-alpha1-00071",
+          "ImageSharp.Processing": "1.0.0-alpha1-00051",
+          "System.Buffers": "4.0.0",
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Diagnostics.Tools": "4.0.1",
+          "System.IO": "4.1.0",
+          "System.IO.Compression": "4.1.0",
+          "System.Linq": "4.1.0",
+          "System.Numerics.Vectors": "4.1.1",
+          "System.ObjectModel": "4.0.12",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.0.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Runtime.Numerics": "4.0.1",
+          "System.Text.Encoding.Extensions": "4.0.11",
+          "System.Threading": "4.0.11",
+          "System.Threading.Tasks": "4.0.11",
+          "System.Threading.Tasks.Parallel": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/ImageSharp.Drawing.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/ImageSharp.Drawing.dll": {}
+        }
+      },
+      "ImageSharp.Formats.Png/1.0.0-alpha1-00051": {
+        "type": "package",
+        "dependencies": {
+          "ImageSharp": "1.0.0-alpha1-00071",
+          "System.Buffers": "4.0.0",
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Diagnostics.Tools": "4.0.1",
+          "System.IO": "4.1.0",
+          "System.IO.Compression": "4.1.0",
+          "System.Linq": "4.1.0",
+          "System.Numerics.Vectors": "4.1.1",
+          "System.ObjectModel": "4.0.12",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.0.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Runtime.Numerics": "4.0.1",
+          "System.Text.Encoding.Extensions": "4.0.11",
+          "System.Threading": "4.0.11",
+          "System.Threading.Tasks": "4.0.11",
+          "System.Threading.Tasks.Parallel": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/ImageSharp.Formats.Png.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/ImageSharp.Formats.Png.dll": {}
+        }
+      },
+      "ImageSharp.Processing/1.0.0-alpha1-00051": {
+        "type": "package",
+        "dependencies": {
+          "ImageSharp": "1.0.0-alpha1",
+          "System.Buffers": "4.0.0",
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Diagnostics.Tools": "4.0.1",
+          "System.IO": "4.1.0",
+          "System.IO.Compression": "4.1.0",
+          "System.Linq": "4.1.0",
+          "System.Numerics.Vectors": "4.1.1",
+          "System.ObjectModel": "4.0.12",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.0.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Runtime.Numerics": "4.0.1",
+          "System.Text.Encoding.Extensions": "4.0.11",
+          "System.Threading": "4.0.11",
+          "System.Threading.Tasks": "4.0.11",
+          "System.Threading.Tasks.Parallel": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/ImageSharp.Processing.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/ImageSharp.Processing.dll": {}
+        }
+      },
       "Libuv/1.9.1": {
         "type": "package",
         "dependencies": {
@@ -545,7 +665,7 @@
           "lib/netstandard1.1/System.Buffers.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/_._": {}
+          "lib/netstandard1.1/System.Buffers.dll": {}
         }
       },
       "System.Collections/4.3.0": {
@@ -577,7 +697,7 @@
           "ref/netstandard1.3/System.Collections.Concurrent.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Collections.Concurrent.dll": {}
         }
       },
       "System.Collections.Immutable/1.3.0": {
@@ -874,7 +994,11 @@
           "ref/netstandard1.3/System.IO.Compression.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/System.IO.Compression.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.IO.Compression.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1018,7 +1142,7 @@
           "ref/netstandard1.6/System.Linq.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.6/_._": {}
+          "lib/netstandard1.6/System.Linq.dll": {}
         }
       },
       "System.Linq.Expressions/4.3.0": {
@@ -1279,7 +1403,7 @@
           "ref/netstandard1.0/System.Numerics.Vectors.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/_._": {}
+          "lib/netstandard1.0/System.Numerics.Vectors.dll": {}
         }
       },
       "System.ObjectModel/4.3.0": {
@@ -1295,7 +1419,7 @@
           "ref/netstandard1.3/System.ObjectModel.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.ObjectModel.dll": {}
         }
       },
       "System.Reflection/4.3.0": {
@@ -1479,6 +1603,18 @@
           "ref/netstandard1.5/System.Runtime.dll": {}
         }
       },
+      "System.Runtime.CompilerServices.Unsafe/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
       "System.Runtime.Extensions/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1565,7 +1701,7 @@
           "ref/netstandard1.1/System.Runtime.Numerics.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Runtime.Numerics.dll": {}
         }
       },
       "System.Security.Claims/4.3.0": {
@@ -1890,7 +2026,7 @@
           "ref/netstandard1.3/System.Threading.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Threading.dll": {}
         }
       },
       "System.Threading.Overlapped/4.3.0": {
@@ -1974,7 +2110,7 @@
           "ref/netstandard1.1/System.Threading.Tasks.Parallel.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Threading.Tasks.Parallel.dll": {}
         }
       },
       "System.Threading.Thread/4.3.0": {
@@ -2126,6 +2262,66 @@
     }
   },
   "libraries": {
+    "ImageSharp/1.0.0-alpha1-00071": {
+      "sha512": "0NogP2qKLHx1boq0iVNaAIYaJB2hhQOkRCpVrHimOwP9aiSmaZhincn09hTtWPi1DfZgQKnJw5lNXfv4Hcdoow==",
+      "type": "package",
+      "path": "ImageSharp/1.0.0-alpha1-00071",
+      "files": [
+        "ImageSharp.1.0.0-alpha1-00071.nupkg.sha512",
+        "ImageSharp.nuspec",
+        "lib/net45/ImageSharp.dll",
+        "lib/net45/ImageSharp.xml",
+        "lib/net461/ImageSharp.dll",
+        "lib/net461/ImageSharp.xml",
+        "lib/netstandard1.1/ImageSharp.dll",
+        "lib/netstandard1.1/ImageSharp.xml"
+      ]
+    },
+    "ImageSharp.Drawing/1.0.0-alpha1-00051": {
+      "sha512": "WLYzCQrilEIO3sjanZnU3FBdl9qaQ+ZFP+NrbVUa1xBACUwyc+rjCE1samE0bTK9aHOb7FoEbfTgH7xh794atg==",
+      "type": "package",
+      "path": "ImageSharp.Drawing/1.0.0-alpha1-00051",
+      "files": [
+        "ImageSharp.Drawing.1.0.0-alpha1-00051.nupkg.sha512",
+        "ImageSharp.Drawing.nuspec",
+        "lib/net45/ImageSharp.Drawing.dll",
+        "lib/net45/ImageSharp.Drawing.xml",
+        "lib/net461/ImageSharp.Drawing.dll",
+        "lib/net461/ImageSharp.Drawing.xml",
+        "lib/netstandard1.1/ImageSharp.Drawing.dll",
+        "lib/netstandard1.1/ImageSharp.Drawing.xml"
+      ]
+    },
+    "ImageSharp.Formats.Png/1.0.0-alpha1-00051": {
+      "sha512": "FyEoet77uCOxUfdxJbYW5xTeoN8oXoKku7HeciNrv9aHSzUs8sNCN3FtDrGeURTCBR1UkyvgrlDk+oXHTcUs/w==",
+      "type": "package",
+      "path": "ImageSharp.Formats.Png/1.0.0-alpha1-00051",
+      "files": [
+        "ImageSharp.Formats.Png.1.0.0-alpha1-00051.nupkg.sha512",
+        "ImageSharp.Formats.Png.nuspec",
+        "lib/net45/ImageSharp.Formats.Png.dll",
+        "lib/net45/ImageSharp.Formats.Png.xml",
+        "lib/net461/ImageSharp.Formats.Png.dll",
+        "lib/net461/ImageSharp.Formats.Png.xml",
+        "lib/netstandard1.1/ImageSharp.Formats.Png.dll",
+        "lib/netstandard1.1/ImageSharp.Formats.Png.xml"
+      ]
+    },
+    "ImageSharp.Processing/1.0.0-alpha1-00051": {
+      "sha512": "wa5pW9ODwE5xa2sP8cuJnxCKhO3IrsE3+WTmLF9rBLZ243jCd1NfdTb34gHJhvbE0mOWGJ/Tqnl6DKkQYt4bqA==",
+      "type": "package",
+      "path": "ImageSharp.Processing/1.0.0-alpha1-00051",
+      "files": [
+        "ImageSharp.Processing.1.0.0-alpha1-00051.nupkg.sha512",
+        "ImageSharp.Processing.nuspec",
+        "lib/net45/ImageSharp.Processing.dll",
+        "lib/net45/ImageSharp.Processing.xml",
+        "lib/net461/ImageSharp.Processing.dll",
+        "lib/net461/ImageSharp.Processing.xml",
+        "lib/netstandard1.1/ImageSharp.Processing.dll",
+        "lib/netstandard1.1/ImageSharp.Processing.xml"
+      ]
+    },
     "Libuv/1.9.1": {
       "sha512": "54rxM9GLDC64WYw+yg4H+JuzZFRmrqdrzyGdG+0ADvUu+Djgw//8Tn0bNcWhTOY8tE+jeUmdu7gdvBlECvMORQ==",
       "type": "package",
@@ -5373,6 +5569,19 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
+    "System.Runtime.CompilerServices.Unsafe/4.0.0": {
+      "sha512": "LDvjxLx2fkThOFo/SC+901fJrh5artALmgzeSqnVxzvFp4q3HO8BkeLyshPdcbs5zpN7Xh9G23M6sDhgIPbG9A==",
+      "type": "package",
+      "path": "System.Runtime.CompilerServices.Unsafe/4.0.0",
+      "files": [
+        "System.Runtime.CompilerServices.Unsafe.4.0.0.nupkg.sha512",
+        "System.Runtime.CompilerServices.Unsafe.nuspec",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml"
+      ]
+    },
     "System.Runtime.Extensions/4.3.0": {
       "sha512": "Cgmgo2lHbzaJIX0P5kXi//KD6rNWywLlpFnUE2qP3Al1xrskd9ncsGWSOuWjwcX3OcLd7bTHl+piFFz/0XEolA==",
       "type": "package",
@@ -6928,7 +7137,10 @@
     }
   },
   "projectFileDependencyGroups": {
-    "": [],
+    "": [
+      "ImageSharp.Drawing >= 1.0.0-alpha1-00051",
+      "ImageSharp.Formats.Png >= 1.0.0-alpha1-00051"
+    ],
     ".NETCoreApp,Version=v1.1": [
       "Microsoft.NETCore.App >= 1.1.0"
     ]

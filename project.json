@@ -4,7 +4,10 @@
     "debugType": "portable",
     "emitEntryPoint": true
   },
-  "dependencies": {},
+  "dependencies": {
+    "ImageSharp.Formats.Png": "1.0.0-alpha1-00051",
+    "ImageSharp.Drawing": "1.0.0-alpha1-00051" 
+  },
   "frameworks": {
     "netcoreapp1.1": {
       "dependencies": {

@@ -4,6 +4,9 @@ namespace Mazes
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
+    using ImageSharp.Drawing.Pens;
+    using System.Numerics;
+    using ImageSharp;
     public class Grid
     {
         private Cell[,] grid;
@@ -95,6 +98,32 @@ namespace Mazes
             }
 
             return output.ToString();
+        }
+
+        public Image ToImage(uint cellSize = 50)
+        {
+            var imgWidth = cellSize * Columns;
+            var imgHeight = cellSize * Rows;
+
+            var image = new Image((int)imgWidth+1,(int)imgHeight+1);
+            image.BackgroundColor(Color.White);
+
+            var wall = Pens.Solid(Color.Black,(float)0.1);
+        
+            foreach(Cell cell in EachCell())
+            {
+                float x1 = cell.Column * cellSize;
+                float y1 = cell.Row * cellSize;
+                float x2 = (cell.Column+1) * cellSize;
+                float y2 = (cell.Row+1) * cellSize;
+
+                if(cell.North==null) image.DrawLines(wall,new Vector2[] {new Vector2(x1,y1),new Vector2(x2,y1)});
+                if(cell.West==null) image.DrawLines(wall,new Vector2[] {new Vector2(x1,y1),new Vector2(x1,y2)});
+
+                if(!cell.IsLinked(cell.East)) image.DrawLines(wall,new Vector2[] {new Vector2(x2,y1),new Vector2(x2,y2)});
+                if(!cell.IsLinked(cell.South)) image.DrawLines(wall,new Vector2[] {new Vector2(x1,y2),new Vector2(x2,y2)});
+            }
+            return image;                
         }
     }
 }

@@ -5,4 +5,4 @@ grid = Grid.new(4,4)
 BinaryTree.on(grid)
 puts grid
 img = grid.to_png
-img.save "maze_binarytree.png"
+img.save "maze_binarytree_ruby.png"
