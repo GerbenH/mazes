@@ -255,3 +255,16 @@ paket-files/
 
 # generated images
 *.png
+
+# copied from leiningen new project
+/target
+/classes
+/checkouts
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+/.lein-*
+/.nrepl-port
+.hgignore
+.hg/
