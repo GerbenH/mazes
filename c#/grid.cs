@@ -69,6 +69,11 @@ namespace Mazes
             return grid.Cast<Cell>();
         }
 
+        protected virtual string ContentsOf(Cell cell)
+        {
+            return String.Concat(Enumerable.Repeat(" ",3));
+        }
+
         public override string ToString()
         {
             var output = new StringBuilder();
@@ -84,7 +89,7 @@ namespace Mazes
                 {
                     var cellToWorkWith = cell ?? new Cell(0,0); // TODO: must be able to set to -1 afterall..
 
-                    var body = String.Concat(Enumerable.Repeat(" ",3));
+                    var body = ContentsOf(cell);
                     var eastBoundary = cellToWorkWith.IsLinked(cellToWorkWith.East) ? " " : "|";
                     top.Append($"{body}{eastBoundary}");
 

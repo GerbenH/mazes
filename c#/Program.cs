@@ -23,6 +23,13 @@
             {
                 sideWinderGrid.ToImage().SaveAsPng(output);
             }
+
+            DistanceGrid sideWinderDistanceGrid = new DistanceGrid(5,5);
+            SideWinder.Perform(sideWinderDistanceGrid);
+
+            sideWinderDistanceGrid.Distance = sideWinderDistanceGrid[0,0].GetDistances();
+            System.Console.WriteLine($"SideWinder DistanceGrid\n{sideWinderDistanceGrid.ToString()}");
+
         }
     }
 }

@@ -52,5 +52,32 @@ namespace Mazes
                 return returnList;
             }
         }
+
+        public Distances GetDistances()
+        {
+            Distances distances = new Distances(this);
+            List<Cell> frontier = new List<Cell>() {this};
+            List<Cell> newFrontier = new List<Cell>();
+
+            while(frontier.Count > 0)
+            {               
+                newFrontier = new List<Cell>(); 
+                foreach(Cell frontierCell in frontier)
+                {              
+                    foreach(Cell linkedCell in frontierCell.GetAllLinks)
+                    {
+                        if(distances[linkedCell] == null) 
+                        {
+                            distances[linkedCell] = distances[frontierCell] + 1;
+                            newFrontier.Add(linkedCell);
+                        }
+                    }
+                }
+
+                frontier = newFrontier;
+            }
+
+            return distances;
+        }
     }
 }
