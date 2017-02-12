@@ -13,7 +13,7 @@ namespace Mazes
         {
             if(_distances?[cell] != null)
             {
-                return $" {_distances[cell]} ";
+                return $" {_distances[cell]:x} ";
             }else
             {
                 return base.ContentsOf(cell);
